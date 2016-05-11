@@ -1,0 +1,373 @@
+// vars
+///////
+
+// Devices
+$tablet: 768px;
+$laptop: 1024px;
+
+// nav
+$nav-height: 32px;
+$nav-color: #eee;
+$nav-background: #000;
+$nav-color-active: #eee;
+$nav-background-active: #000;
+$nav-animation-duration: .3s;
+$nav-animation-duration-2: .25s;
+$nav-box-shadow: 0 4px 8px #000;
+
+// slide
+$switch-label-offset: 8%;
+
+// center
+$logo-height: 75px;
+$logo-secondary-height: 50px;
+
+$cta-z-index: 10;
+
+$poster-img-width: 640px;
+$poster-img-height: 360px;
+
+html, body {
+  height: 100%;
+  * {
+    z-index: 1;
+  }
+}
+
+.callout, .error {
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.04) 25%, transparent 25%, transparent 50%, rgba(0, 0, 0, 0.04) 50%, rgba(0, 0, 0, 0.04) 75%, transparent 75%, transparent);
+  margin: 0;
+  z-index: 10;
+  p {
+    margin: 0;
+  }
+}
+
+.wrapper {
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  height: 100%;
+  position: relative;
+  // box shadow
+  &::after {
+    content: '';
+    background: linear-gradient(180deg, black 10%, transparent);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  #slider {
+    height: 100%;
+
+    .slick-slide {
+      outline: 0px solid transparent !important;
+    }
+
+    .left, .center, .right {
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .left, .right {
+      display: none;
+      overflow-y: auto;
+      .switch {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: $nav-height;
+        margin: 0;
+        z-index: 200;
+        .switch-input {
+          &:checked + .switch-paddle {
+            color: $nav-color-active;
+            background: $nav-background-active;
+            & > .switch-inactive {
+              display: block;
+            }
+          }
+        }
+        .switch-paddle {
+          box-shadow: $nav-box-shadow;
+          background: $nav-background;
+          width: 100%;
+          height: 100%;
+          transition: all $nav-animation-duration  ease-out;
+
+          &::after {
+            background: none;
+            border-bottom: 2px solid $nav-color-active;
+            top: 25%;
+            transition: all $nav-animation-duration-2 ease-out;
+          }
+        }
+      }
+      .outer {
+        display: table;
+        position: absolute;
+        padding-top: $nav-height * 2;
+        min-height: 500px;
+        height: 100%;
+        width: 100%;
+        & > .inner {
+          display: table-cell;
+          vertical-align: middle;
+          & > .row {
+            & > .columns {
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+
+    .left {
+      .switch {
+        .switch-input {
+          &:checked ~ .switch-paddle {
+            &::after {
+              left: $switch-label-offset;
+              width: 55px;
+            }
+          }
+        }
+        .switch-paddle {
+          .switch-active {
+            left: $switch-label-offset;
+          }
+          .switch-inactive {
+            right: $switch-label-offset;
+          }
+          &::after {
+            left: 100%;
+          }
+        }
+      }
+    }
+
+    .center {
+      .controller {
+        .button-group {
+          box-shadow: $nav-box-shadow;
+          position: relative;
+          overflow: auto;
+          margin: 0;
+          .button {
+            &:first-child {
+              text-align: left;
+              padding-left: $switch-label-offset;
+            }
+            &:last-child {
+              text-align: right;
+              padding-right: $switch-label-offset;
+            }
+            color: $nav-color;
+            background: $nav-background;
+            border: none;
+            outline: 0px solid transparent !important;
+            height: $nav-height;
+            line-height: $nav-height;
+            padding: 0;
+            margin: 0;
+            width: 50%;
+            transition: background-color $nav-animation-duration ease-out, color $nav-animation-duration ease-out;
+            &.active {
+              color: $nav-color-active;
+              background: $nav-background-active;
+            }
+          }
+        }
+      }
+      .quote {
+        color: #fff;
+        border: none;
+        display: block;
+        padding: 0;
+        text-align: center;
+        margin: 0 auto;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 10%;
+        width: 80%;
+        z-index: 2;
+      }
+
+      .logo {
+        text-align: center;
+        height: $logo-height;
+        font-size: $logo-height;
+        line-height: $logo-height;
+        position: absolute;
+        margin: auto;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 2;
+        @media (min-width: $poster-img-width) {
+          font-size: 8rem;
+        }
+        @media (min-width: $laptop) {
+          font-size: 12rem;
+        }
+      }
+
+      .cta {
+        display: block;
+        margin: 0 auto;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 5%;
+        width: 80%;
+        font-size: 0;
+        z-index: $cta-z-index;
+        @media (min-width: $tablet) {
+          width: 40%;
+        }
+
+        & > * {
+          margin: 0;
+        }
+
+        .input-group-field {
+          border: none;
+          display: inline-block;
+          width: 70%;
+          box-shadow: none;
+          border-right-width: 0;
+          border-radius: 0 0 0 1em;
+          position: relative;
+          z-index: 2;
+        }
+        .input-group-button {
+          display: inline-block;
+          width: 30%;
+          position: relative;
+          z-index: 2;
+          .button {
+            width: 100%;
+          }
+        }
+        .input-group-label {
+          background: #666;
+          border-radius: 0 0 0 2em;
+          position: relative;
+          top: -20px;
+          border: none;
+          display: block;
+          font-size: 12px;
+          text-align: left;
+          padding-top: 1.5rem;
+          padding-bottom: .5rem;
+          white-space: normal;
+          width: 100%;
+        }
+      }
+    }
+
+    .right {
+      .switch {
+        .switch-input {
+          &:checked ~ .switch-paddle {
+            &::after {
+              right: $switch-label-offset;
+              width: 48px;
+            }
+          }
+        }
+        .switch-paddle {
+          .switch-active {
+            left: auto;
+            right: $switch-label-offset;
+          }
+          .switch-inactive {
+            left: $switch-label-offset;
+          }
+          &::after {
+            left: auto;
+            right: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+// video
+////////
+.homepage-hero-module {
+    border-right: none;
+    border-left: none;
+    position: absolute;
+    width: 100%;
+}
+.video-container {
+    position: relative;
+    bottom: 0%;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background: #000;
+
+    .poster {
+      display: block;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      @media screen and (min-width: $poster-img-width) {
+        display: none;
+      }
+
+      &::before {
+        content: '';
+        background: linear-gradient(180deg, black, transparent);
+        width: 100%;
+        height: 50%;
+        position: absolute;
+        top: -10%;
+        left: 0;
+        z-index: 1;
+      }
+
+      img {
+          filter: gray blur(5px);
+          filter: grayscale(1) blur(5px);
+          -webkit-filter: grayscale(1) blur(3px);
+
+          display: block;
+          max-width: 200%;
+          max-height: 200%;
+      }
+    }
+    .filter {
+        background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/562788/dot2px.png');
+        position: absolute;
+        width: 100%;
+        z-index: 2;
+    }
+    video {
+        display: none;
+        filter: gray blur(5px);
+        filter: grayscale(1) blur(5px);
+        -webkit-filter: grayscale(1) blur(5px);
+        position: absolute;
+        z-index: 0;
+        bottom: 0;
+        @media screen and (min-width: $poster-img-width) {
+          display: block
+        }
+    }
+    video.fillWidth {
+        width: 100%;
+    }
+}
+//////////////////////////////////
