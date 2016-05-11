@@ -1,36 +1,36 @@
-/* line 27, ../scss/style.scss */
+/* line 28, ../scss/style.scss */
 html, body {
   height: 100%;
 }
-/* line 29, ../scss/style.scss */
+/* line 30, ../scss/style.scss */
 html *, body * {
   z-index: 1;
 }
 
-/* line 34, ../scss/style.scss */
+/* line 35, ../scss/style.scss */
 .callout, .error {
   background: linear-gradient(135deg, rgba(0, 0, 0, 0.04) 25%, transparent 25%, transparent 50%, rgba(0, 0, 0, 0.04) 50%, rgba(0, 0, 0, 0.04) 75%, transparent 75%, transparent);
   text-align: center;
   margin: 0;
   z-index: 10;
 }
-/* line 39, ../scss/style.scss */
+/* line 40, ../scss/style.scss */
 .callout p, .error p {
   margin: 0;
 }
-/* line 43, ../scss/style.scss */
+/* line 44, ../scss/style.scss */
 .callout ~ .poster-container, .error ~ .poster-container {
   top: 59px;
 }
 
-/* line 48, ../scss/style.scss */
+/* line 49, ../scss/style.scss */
 .wrapper {
   background: rgba(0, 0, 0, 0.7);
   color: #fff;
   height: 100%;
   position: relative;
 }
-/* line 54, ../scss/style.scss */
+/* line 55, ../scss/style.scss */
 .wrapper::after {
   content: '';
   background: linear-gradient(180deg, black 10%, transparent);
@@ -40,26 +40,26 @@ html *, body * {
   width: 100%;
   height: 100%;
 }
-/* line 64, ../scss/style.scss */
+/* line 65, ../scss/style.scss */
 .wrapper #slider {
   height: 100%;
 }
-/* line 67, ../scss/style.scss */
+/* line 68, ../scss/style.scss */
 .wrapper #slider .slick-slide {
   outline: 0px solid transparent !important;
 }
-/* line 71, ../scss/style.scss */
+/* line 72, ../scss/style.scss */
 .wrapper #slider .left, .wrapper #slider .center, .wrapper #slider .right {
   height: 100%;
   position: relative;
   overflow: hidden;
 }
-/* line 77, ../scss/style.scss */
+/* line 78, ../scss/style.scss */
 .wrapper #slider .left, .wrapper #slider .right {
   display: none;
   overflow-y: auto;
 }
-/* line 80, ../scss/style.scss */
+/* line 81, ../scss/style.scss */
 .wrapper #slider .left .switch, .wrapper #slider .right .switch {
   position: absolute;
   top: 0;
@@ -69,16 +69,22 @@ html *, body * {
   margin: 0;
   z-index: 200;
 }
-/* line 89, ../scss/style.scss */
+@media (min-width: 768px) {
+  /* line 81, ../scss/style.scss */
+  .wrapper #slider .left .switch, .wrapper #slider .right .switch {
+    height: 64px;
+  }
+}
+/* line 94, ../scss/style.scss */
 .wrapper #slider .left .switch .switch-input:checked + .switch-paddle, .wrapper #slider .right .switch .switch-input:checked + .switch-paddle {
   color: #eee;
   background: #000;
 }
-/* line 92, ../scss/style.scss */
+/* line 97, ../scss/style.scss */
 .wrapper #slider .left .switch .switch-input:checked + .switch-paddle > .switch-inactive, .wrapper #slider .right .switch .switch-input:checked + .switch-paddle > .switch-inactive {
   display: block;
 }
-/* line 97, ../scss/style.scss */
+/* line 103, ../scss/style.scss */
 .wrapper #slider .left .switch .switch-paddle, .wrapper #slider .right .switch .switch-paddle {
   box-shadow: 0 4px 8px #000;
   background: #000;
@@ -86,7 +92,7 @@ html *, body * {
   height: 100%;
   transition: all 0.3s ease-out;
 }
-/* line 104, ../scss/style.scss */
+/* line 110, ../scss/style.scss */
 .wrapper #slider .left .switch .switch-paddle::after, .wrapper #slider .right .switch .switch-paddle::after {
   background: none;
   border-bottom: 2px solid #eee;
@@ -94,7 +100,7 @@ html *, body * {
   bottom: 0;
   transition: all 0.25s ease-out;
 }
-/* line 113, ../scss/style.scss */
+/* line 119, ../scss/style.scss */
 .wrapper #slider .left .outer, .wrapper #slider .right .outer {
   display: table;
   position: absolute;
@@ -103,40 +109,40 @@ html *, body * {
   height: 100%;
   width: 100%;
 }
-/* line 120, ../scss/style.scss */
+/* line 126, ../scss/style.scss */
 .wrapper #slider .left .outer > .inner, .wrapper #slider .right .outer > .inner {
   display: table-cell;
   vertical-align: middle;
 }
-/* line 124, ../scss/style.scss */
+/* line 130, ../scss/style.scss */
 .wrapper #slider .left .outer > .inner > .row > .columns, .wrapper #slider .right .outer > .inner > .row > .columns {
   text-align: center;
 }
-/* line 136, ../scss/style.scss */
+/* line 142, ../scss/style.scss */
 .wrapper #slider .left .switch .switch-input:checked ~ .switch-paddle::after {
   left: 8%;
   width: 55px;
 }
-/* line 143, ../scss/style.scss */
+/* line 149, ../scss/style.scss */
 .wrapper #slider .left .switch .switch-paddle .switch-active {
   left: 8%;
 }
-/* line 146, ../scss/style.scss */
+/* line 152, ../scss/style.scss */
 .wrapper #slider .left .switch .switch-paddle .switch-inactive {
   right: 8%;
 }
-/* line 149, ../scss/style.scss */
+/* line 155, ../scss/style.scss */
 .wrapper #slider .left .switch .switch-paddle::after {
   left: 100%;
 }
-/* line 158, ../scss/style.scss */
+/* line 164, ../scss/style.scss */
 .wrapper #slider .center .controller .button-group {
   box-shadow: 0 4px 8px #000;
   position: relative;
   overflow: auto;
   margin: 0;
 }
-/* line 163, ../scss/style.scss */
+/* line 169, ../scss/style.scss */
 .wrapper #slider .center .controller .button-group .button {
   color: #eee;
   background: #000;
@@ -150,22 +156,29 @@ html *, body * {
   width: 50%;
   transition: background-color 0.3s ease-out, color 0.3s ease-out;
 }
-/* line 164, ../scss/style.scss */
+/* line 170, ../scss/style.scss */
 .wrapper #slider .center .controller .button-group .button:first-child {
   text-align: left;
   padding-left: 8%;
 }
-/* line 168, ../scss/style.scss */
+/* line 174, ../scss/style.scss */
 .wrapper #slider .center .controller .button-group .button:last-child {
   text-align: right;
   padding-right: 8%;
 }
-/* line 183, ../scss/style.scss */
+@media (min-width: 768px) {
+  /* line 169, ../scss/style.scss */
+  .wrapper #slider .center .controller .button-group .button {
+    height: 64px;
+    line-height: 64px;
+  }
+}
+/* line 194, ../scss/style.scss */
 .wrapper #slider .center .controller .button-group .button.active {
   color: #eee;
   background: #000;
 }
-/* line 190, ../scss/style.scss */
+/* line 201, ../scss/style.scss */
 .wrapper #slider .center .quote {
   color: #fff;
   border: none;
@@ -180,7 +193,13 @@ html *, body * {
   width: 80%;
   z-index: 2;
 }
-/* line 205, ../scss/style.scss */
+@media (min-width: 768px) {
+  /* line 201, ../scss/style.scss */
+  .wrapper #slider .center .quote {
+    top: 20%;
+  }
+}
+/* line 219, ../scss/style.scss */
 .wrapper #slider .center .logo {
   text-align: center;
   height: 75px;
@@ -195,12 +214,12 @@ html *, body * {
   z-index: 2;
 }
 @media (min-width: 768px) {
-  /* line 205, ../scss/style.scss */
+  /* line 219, ../scss/style.scss */
   .wrapper #slider .center .logo {
     font-size: 8rem;
   }
 }
-/* line 222, ../scss/style.scss */
+/* line 236, ../scss/style.scss */
 .wrapper #slider .center .cta {
   display: block;
   margin: 0 auto;
@@ -213,16 +232,17 @@ html *, body * {
   z-index: 10;
 }
 @media (min-width: 768px) {
-  /* line 222, ../scss/style.scss */
+  /* line 236, ../scss/style.scss */
   .wrapper #slider .center .cta {
+    bottom: 10%;
     width: 40%;
   }
 }
-/* line 236, ../scss/style.scss */
+/* line 251, ../scss/style.scss */
 .wrapper #slider .center .cta > * {
   margin: 0;
 }
-/* line 240, ../scss/style.scss */
+/* line 255, ../scss/style.scss */
 .wrapper #slider .center .cta .input-group-field {
   border: none;
   display: inline-block;
@@ -233,7 +253,7 @@ html *, body * {
   position: relative;
   z-index: 2;
 }
-/* line 250, ../scss/style.scss */
+/* line 265, ../scss/style.scss */
 .wrapper #slider .center .cta .input-group-button {
   display: inline-block;
   height: 40px;
@@ -241,12 +261,12 @@ html *, body * {
   position: relative;
   z-index: 2;
 }
-/* line 256, ../scss/style.scss */
+/* line 271, ../scss/style.scss */
 .wrapper #slider .center .cta .input-group-button .button {
   height: 100%;
   width: 100%;
 }
-/* line 261, ../scss/style.scss */
+/* line 276, ../scss/style.scss */
 .wrapper #slider .center .cta .input-group-label {
   background: #777;
   border-radius: 0 0 0 2em;
@@ -261,27 +281,27 @@ html *, body * {
   white-space: normal;
   width: 100%;
 }
-/* line 282, ../scss/style.scss */
+/* line 297, ../scss/style.scss */
 .wrapper #slider .right .switch .switch-input:checked ~ .switch-paddle::after {
   right: 8%;
   width: 48px;
 }
-/* line 289, ../scss/style.scss */
+/* line 304, ../scss/style.scss */
 .wrapper #slider .right .switch .switch-paddle .switch-active {
   left: auto;
   right: 8%;
 }
-/* line 293, ../scss/style.scss */
+/* line 308, ../scss/style.scss */
 .wrapper #slider .right .switch .switch-paddle .switch-inactive {
   left: 8%;
 }
-/* line 296, ../scss/style.scss */
+/* line 311, ../scss/style.scss */
 .wrapper #slider .right .switch .switch-paddle::after {
   left: auto;
   right: 100%;
 }
 
-/* line 309, ../scss/style.scss */
+/* line 324, ../scss/style.scss */
 .poster-container {
   position: absolute;
   bottom: 0%;
@@ -291,7 +311,7 @@ html *, body * {
   overflow: hidden;
   background: #000;
 }
-/* line 318, ../scss/style.scss */
+/* line 333, ../scss/style.scss */
 .poster-container .poster {
   display: block;
   position: absolute;
@@ -299,7 +319,7 @@ html *, body * {
   bottom: 0;
   width: 100%;
 }
-/* line 325, ../scss/style.scss */
+/* line 340, ../scss/style.scss */
 .poster-container .poster::before {
   content: '';
   background: linear-gradient(180deg, black, transparent);
@@ -310,7 +330,7 @@ html *, body * {
   left: 0;
   z-index: 1;
 }
-/* line 336, ../scss/style.scss */
+/* line 351, ../scss/style.scss */
 .poster-container .poster img {
   filter: gray blur(5px);
   filter: grayscale(1) blur(5px);
@@ -320,18 +340,18 @@ html *, body * {
   display: block;
 }
 @media (min-width: 768px) {
-  /* line 336, ../scss/style.scss */
+  /* line 351, ../scss/style.scss */
   .poster-container .poster img {
     width: 150%;
   }
 }
 @media (min-width: 1024px) {
-  /* line 336, ../scss/style.scss */
+  /* line 351, ../scss/style.scss */
   .poster-container .poster img {
     width: 100%;
   }
 }
-/* line 352, ../scss/style.scss */
+/* line 367, ../scss/style.scss */
 .poster-container .filter {
   background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/562788/dot2px.png");
   position: absolute;
