@@ -24,9 +24,6 @@ $logo-secondary-height: 50px;
 
 $cta-z-index: 10;
 
-$poster-img-width: 640px;
-$poster-img-height: 360px;
-
 html, body {
   height: 100%;
   * {
@@ -210,11 +207,8 @@ html, body {
         bottom: 0;
         right: 0;
         z-index: 2;
-        @media (min-width: $poster-img-width) {
+        @media (min-width: $tablet) {
           font-size: 8rem;
-        }
-        @media (min-width: $laptop) {
-          font-size: 12rem;
         }
       }
 
@@ -301,16 +295,10 @@ html, body {
 }
 
 
-// video
+// poster
 ////////
-.homepage-hero-module {
-    border-right: none;
-    border-left: none;
+.poster-container {
     position: absolute;
-    width: 100%;
-}
-.video-container {
-    position: relative;
     bottom: 0%;
     left: 0%;
     height: 100%;
@@ -323,9 +311,7 @@ html, body {
       position: absolute;
       left: 0;
       bottom: 0;
-      @media screen and (min-width: $poster-img-width) {
-        display: none;
-      }
+      width: 100%;
 
       &::before {
         content: '';
@@ -343,31 +329,23 @@ html, body {
           filter: grayscale(1) blur(5px);
           -webkit-filter: grayscale(1) blur(3px);
 
+          max-width: none;
+          width: 200%;
           display: block;
-          max-width: 200%;
-          max-height: 200%;
+          @media (min-width: $tablet) {
+            width: 150%;
+          }
+          @media (min-width: $laptop) {
+            width: 100%;
+          }
       }
     }
     .filter {
         background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/562788/dot2px.png');
         position: absolute;
+        height: 100%;
         width: 100%;
         z-index: 2;
-    }
-    video {
-        display: none;
-        filter: gray blur(5px);
-        filter: grayscale(1) blur(5px);
-        -webkit-filter: grayscale(1) blur(5px);
-        position: absolute;
-        z-index: 0;
-        bottom: 0;
-        @media screen and (min-width: $poster-img-width) {
-          display: block
-        }
-    }
-    video.fillWidth {
-        width: 100%;
     }
 }
 //////////////////////////////////

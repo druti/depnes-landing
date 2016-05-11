@@ -1,31 +1,31 @@
-/* line 30, ../scss/style.scss */
+/* line 27, ../scss/style.scss */
 html, body {
   height: 100%;
 }
-/* line 32, ../scss/style.scss */
+/* line 29, ../scss/style.scss */
 html *, body * {
   z-index: 1;
 }
 
-/* line 37, ../scss/style.scss */
+/* line 34, ../scss/style.scss */
 .callout, .error {
   background: linear-gradient(135deg, rgba(0, 0, 0, 0.04) 25%, transparent 25%, transparent 50%, rgba(0, 0, 0, 0.04) 50%, rgba(0, 0, 0, 0.04) 75%, transparent 75%, transparent);
   margin: 0;
   z-index: 10;
 }
-/* line 41, ../scss/style.scss */
+/* line 38, ../scss/style.scss */
 .callout p, .error p {
   margin: 0;
 }
 
-/* line 46, ../scss/style.scss */
+/* line 43, ../scss/style.scss */
 .wrapper {
   background: rgba(0, 0, 0, 0.7);
   color: #fff;
   height: 100%;
   position: relative;
 }
-/* line 52, ../scss/style.scss */
+/* line 49, ../scss/style.scss */
 .wrapper::after {
   content: '';
   background: linear-gradient(180deg, black 10%, transparent);
@@ -35,26 +35,26 @@ html *, body * {
   width: 100%;
   height: 100%;
 }
-/* line 62, ../scss/style.scss */
+/* line 59, ../scss/style.scss */
 .wrapper #slider {
   height: 100%;
 }
-/* line 65, ../scss/style.scss */
+/* line 62, ../scss/style.scss */
 .wrapper #slider .slick-slide {
   outline: 0px solid transparent !important;
 }
-/* line 69, ../scss/style.scss */
+/* line 66, ../scss/style.scss */
 .wrapper #slider .left, .wrapper #slider .center, .wrapper #slider .right {
   height: 100%;
   position: relative;
   overflow: hidden;
 }
-/* line 75, ../scss/style.scss */
+/* line 72, ../scss/style.scss */
 .wrapper #slider .left, .wrapper #slider .right {
   display: none;
   overflow-y: auto;
 }
-/* line 78, ../scss/style.scss */
+/* line 75, ../scss/style.scss */
 .wrapper #slider .left .switch, .wrapper #slider .right .switch {
   position: absolute;
   top: 0;
@@ -64,16 +64,16 @@ html *, body * {
   margin: 0;
   z-index: 200;
 }
-/* line 87, ../scss/style.scss */
+/* line 84, ../scss/style.scss */
 .wrapper #slider .left .switch .switch-input:checked + .switch-paddle, .wrapper #slider .right .switch .switch-input:checked + .switch-paddle {
   color: #eee;
   background: #000;
 }
-/* line 90, ../scss/style.scss */
+/* line 87, ../scss/style.scss */
 .wrapper #slider .left .switch .switch-input:checked + .switch-paddle > .switch-inactive, .wrapper #slider .right .switch .switch-input:checked + .switch-paddle > .switch-inactive {
   display: block;
 }
-/* line 95, ../scss/style.scss */
+/* line 92, ../scss/style.scss */
 .wrapper #slider .left .switch .switch-paddle, .wrapper #slider .right .switch .switch-paddle {
   box-shadow: 0 4px 8px #000;
   background: #000;
@@ -81,14 +81,14 @@ html *, body * {
   height: 100%;
   transition: all 0.3s ease-out;
 }
-/* line 102, ../scss/style.scss */
+/* line 99, ../scss/style.scss */
 .wrapper #slider .left .switch .switch-paddle::after, .wrapper #slider .right .switch .switch-paddle::after {
   background: none;
   border-bottom: 2px solid #eee;
   top: 25%;
   transition: all 0.25s ease-out;
 }
-/* line 110, ../scss/style.scss */
+/* line 107, ../scss/style.scss */
 .wrapper #slider .left .outer, .wrapper #slider .right .outer {
   display: table;
   position: absolute;
@@ -97,40 +97,40 @@ html *, body * {
   height: 100%;
   width: 100%;
 }
-/* line 117, ../scss/style.scss */
+/* line 114, ../scss/style.scss */
 .wrapper #slider .left .outer > .inner, .wrapper #slider .right .outer > .inner {
   display: table-cell;
   vertical-align: middle;
 }
-/* line 121, ../scss/style.scss */
+/* line 118, ../scss/style.scss */
 .wrapper #slider .left .outer > .inner > .row > .columns, .wrapper #slider .right .outer > .inner > .row > .columns {
   text-align: center;
 }
-/* line 133, ../scss/style.scss */
+/* line 130, ../scss/style.scss */
 .wrapper #slider .left .switch .switch-input:checked ~ .switch-paddle::after {
   left: 8%;
   width: 55px;
 }
-/* line 140, ../scss/style.scss */
+/* line 137, ../scss/style.scss */
 .wrapper #slider .left .switch .switch-paddle .switch-active {
   left: 8%;
 }
-/* line 143, ../scss/style.scss */
+/* line 140, ../scss/style.scss */
 .wrapper #slider .left .switch .switch-paddle .switch-inactive {
   right: 8%;
 }
-/* line 146, ../scss/style.scss */
+/* line 143, ../scss/style.scss */
 .wrapper #slider .left .switch .switch-paddle::after {
   left: 100%;
 }
-/* line 155, ../scss/style.scss */
+/* line 152, ../scss/style.scss */
 .wrapper #slider .center .controller .button-group {
   box-shadow: 0 4px 8px #000;
   position: relative;
   overflow: auto;
   margin: 0;
 }
-/* line 160, ../scss/style.scss */
+/* line 157, ../scss/style.scss */
 .wrapper #slider .center .controller .button-group .button {
   color: #eee;
   background: #000;
@@ -143,22 +143,22 @@ html *, body * {
   width: 50%;
   transition: background-color 0.3s ease-out, color 0.3s ease-out;
 }
-/* line 161, ../scss/style.scss */
+/* line 158, ../scss/style.scss */
 .wrapper #slider .center .controller .button-group .button:first-child {
   text-align: left;
   padding-left: 8%;
 }
-/* line 165, ../scss/style.scss */
+/* line 162, ../scss/style.scss */
 .wrapper #slider .center .controller .button-group .button:last-child {
   text-align: right;
   padding-right: 8%;
 }
-/* line 179, ../scss/style.scss */
+/* line 176, ../scss/style.scss */
 .wrapper #slider .center .controller .button-group .button.active {
   color: #eee;
   background: #000;
 }
-/* line 186, ../scss/style.scss */
+/* line 183, ../scss/style.scss */
 .wrapper #slider .center .quote {
   color: #fff;
   border: none;
@@ -173,7 +173,7 @@ html *, body * {
   width: 80%;
   z-index: 2;
 }
-/* line 201, ../scss/style.scss */
+/* line 198, ../scss/style.scss */
 .wrapper #slider .center .logo {
   text-align: center;
   height: 75px;
@@ -187,19 +187,13 @@ html *, body * {
   right: 0;
   z-index: 2;
 }
-@media (min-width: 640px) {
-  /* line 201, ../scss/style.scss */
+@media (min-width: 768px) {
+  /* line 198, ../scss/style.scss */
   .wrapper #slider .center .logo {
     font-size: 8rem;
   }
 }
-@media (min-width: 1024px) {
-  /* line 201, ../scss/style.scss */
-  .wrapper #slider .center .logo {
-    font-size: 12rem;
-  }
-}
-/* line 221, ../scss/style.scss */
+/* line 215, ../scss/style.scss */
 .wrapper #slider .center .cta {
   display: block;
   margin: 0 auto;
@@ -212,16 +206,16 @@ html *, body * {
   z-index: 10;
 }
 @media (min-width: 768px) {
-  /* line 221, ../scss/style.scss */
+  /* line 215, ../scss/style.scss */
   .wrapper #slider .center .cta {
     width: 40%;
   }
 }
-/* line 235, ../scss/style.scss */
+/* line 229, ../scss/style.scss */
 .wrapper #slider .center .cta > * {
   margin: 0;
 }
-/* line 239, ../scss/style.scss */
+/* line 233, ../scss/style.scss */
 .wrapper #slider .center .cta .input-group-field {
   border: none;
   display: inline-block;
@@ -232,18 +226,18 @@ html *, body * {
   position: relative;
   z-index: 2;
 }
-/* line 249, ../scss/style.scss */
+/* line 243, ../scss/style.scss */
 .wrapper #slider .center .cta .input-group-button {
   display: inline-block;
   width: 30%;
   position: relative;
   z-index: 2;
 }
-/* line 254, ../scss/style.scss */
+/* line 248, ../scss/style.scss */
 .wrapper #slider .center .cta .input-group-button .button {
   width: 100%;
 }
-/* line 258, ../scss/style.scss */
+/* line 252, ../scss/style.scss */
 .wrapper #slider .center .cta .input-group-label {
   background: #666;
   border-radius: 0 0 0 2em;
@@ -258,37 +252,29 @@ html *, body * {
   white-space: normal;
   width: 100%;
 }
-/* line 279, ../scss/style.scss */
+/* line 273, ../scss/style.scss */
 .wrapper #slider .right .switch .switch-input:checked ~ .switch-paddle::after {
   right: 8%;
   width: 48px;
 }
-/* line 286, ../scss/style.scss */
+/* line 280, ../scss/style.scss */
 .wrapper #slider .right .switch .switch-paddle .switch-active {
   left: auto;
   right: 8%;
 }
-/* line 290, ../scss/style.scss */
+/* line 284, ../scss/style.scss */
 .wrapper #slider .right .switch .switch-paddle .switch-inactive {
   left: 8%;
 }
-/* line 293, ../scss/style.scss */
+/* line 287, ../scss/style.scss */
 .wrapper #slider .right .switch .switch-paddle::after {
   left: auto;
   right: 100%;
 }
 
-/* line 306, ../scss/style.scss */
-.homepage-hero-module {
-  border-right: none;
-  border-left: none;
+/* line 300, ../scss/style.scss */
+.poster-container {
   position: absolute;
-  width: 100%;
-}
-
-/* line 312, ../scss/style.scss */
-.video-container {
-  position: relative;
   bottom: 0%;
   left: 0%;
   height: 100%;
@@ -296,21 +282,16 @@ html *, body * {
   overflow: hidden;
   background: #000;
 }
-/* line 321, ../scss/style.scss */
-.video-container .poster {
+/* line 309, ../scss/style.scss */
+.poster-container .poster {
   display: block;
   position: absolute;
   left: 0;
   bottom: 0;
+  width: 100%;
 }
-@media screen and (min-width: 640px) {
-  /* line 321, ../scss/style.scss */
-  .video-container .poster {
-    display: none;
-  }
-}
-/* line 330, ../scss/style.scss */
-.video-container .poster::before {
+/* line 316, ../scss/style.scss */
+.poster-container .poster::before {
   content: '';
   background: linear-gradient(180deg, black, transparent);
   width: 100%;
@@ -320,39 +301,32 @@ html *, body * {
   left: 0;
   z-index: 1;
 }
-/* line 341, ../scss/style.scss */
-.video-container .poster img {
+/* line 327, ../scss/style.scss */
+.poster-container .poster img {
   filter: gray blur(5px);
   filter: grayscale(1) blur(5px);
   -webkit-filter: grayscale(1) blur(3px);
+  max-width: none;
+  width: 200%;
   display: block;
-  max-width: 200%;
-  max-height: 200%;
 }
-/* line 351, ../scss/style.scss */
-.video-container .filter {
-  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/562788/dot2px.png");
-  position: absolute;
-  width: 100%;
-  z-index: 2;
-}
-/* line 357, ../scss/style.scss */
-.video-container video {
-  display: none;
-  filter: gray blur(5px);
-  filter: grayscale(1) blur(5px);
-  -webkit-filter: grayscale(1) blur(5px);
-  position: absolute;
-  z-index: 0;
-  bottom: 0;
-}
-@media screen and (min-width: 640px) {
-  /* line 357, ../scss/style.scss */
-  .video-container video {
-    display: block;
+@media (min-width: 768px) {
+  /* line 327, ../scss/style.scss */
+  .poster-container .poster img {
+    width: 150%;
   }
 }
-/* line 369, ../scss/style.scss */
-.video-container video.fillWidth {
+@media (min-width: 1024px) {
+  /* line 327, ../scss/style.scss */
+  .poster-container .poster img {
+    width: 100%;
+  }
+}
+/* line 343, ../scss/style.scss */
+.poster-container .filter {
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/562788/dot2px.png");
+  position: absolute;
+  height: 100%;
   width: 100%;
+  z-index: 2;
 }
