@@ -19,7 +19,7 @@ function root(req, res) {
         res.writeHead(200, {'Content-Type': 'text/html'});
 
         var email = querystring.parse(chunk.toString()).email+'\n',
-            notif = 'Thanks for signing up! :)';
+            notif = 'Thanks for signing up!';
 
         fs.appendFileSync('./server/emails.txt', email,'utf8');
 
