@@ -1,6 +1,10 @@
 // vars
 ///////
 
+// Colors
+$black: #0a0a0a;
+$white: #fefefe;
+
 // Devices
 $tablet: 768px;
 $laptop: 1024px;
@@ -8,10 +12,7 @@ $laptop: 1024px;
 // nav
 $nav-height: 32px;
 $nav-height-large: 64px;
-$nav-color: #eee;
 $nav-background: #000;
-$nav-color-active: #eee;
-$nav-background-active: #000;
 $nav-animation-duration: .3s;
 $nav-animation-duration-2: .25s;
 $nav-box-shadow: 0 4px 8px #000;
@@ -48,7 +49,7 @@ html, body {
 
 .wrapper {
   background: rgba(0, 0, 0, 0.7);
-  color: #fff;
+  color: $white;
   height: 100%;
   position: relative;
   // box shadow
@@ -92,8 +93,8 @@ html, body {
 
         .switch-input {
           &:checked + .switch-paddle {
-            color: $nav-color-active;
-            background: $nav-background-active;
+            color: $white;
+            background: $nav-background;
             & > .switch-inactive {
               display: block;
             }
@@ -109,7 +110,7 @@ html, body {
 
           &::after {
             background: none;
-            border-bottom: 2px solid $nav-color-active;
+            border-bottom: 2px solid $white;
             top: auto;
             bottom: 0;
             transition: all $nav-animation-duration-2 ease-out;
@@ -175,7 +176,7 @@ html, body {
               text-align: right;
               padding-right: $switch-label-offset;
             }
-            color: $nav-color;
+            color: $white;
             background: $nav-background;
             border: none;
             font-weight: bold;
@@ -192,14 +193,14 @@ html, body {
             }
 
             &.active {
-              color: $nav-color-active;
-              background: $nav-background-active;
+              color: $white;
+              background: $nav-background;
             }
           }
         }
       }
       .quote {
-        color: #fff;
+        color: $white;
         border: none;
         display: block;
         padding: 0;
@@ -217,6 +218,7 @@ html, body {
       }
 
       .logo {
+        color: #fff;
         text-align: center;
         height: $logo-height;
         font-size: $logo-height;
@@ -229,6 +231,9 @@ html, body {
         right: 0;
         z-index: 2;
         @media (min-width: $tablet) {
+          font-size: 6rem;
+        }
+        @media (min-width: $laptop) {
           font-size: 8rem;
         }
       }
@@ -269,16 +274,20 @@ html, body {
           position: relative;
           z-index: 2;
           .button {
+            background: $white;
+            border-left: 1px solid $black;
+            color: $black;
             height: 100%;
             width: 100%;
           }
         }
         .input-group-label {
-          background: #777;
+          background: $black;
+          color: $white;
+          border: 1px solid $white;
           border-radius: 0 0 0 2em;
           position: relative;
           top: -20px;
-          border: none;
           display: block;
           font-size: 12px;
           text-align: left;
