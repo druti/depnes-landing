@@ -63,6 +63,11 @@
 
       landingSlide: 1,
 
+      onBeforeChange: function (e, slick, cS, nS) {
+        slick.$slides.eq(cS).css('opacity', 0);
+        slick.$slides.eq(nS).css('opacity', 1);
+      },
+
       init: function () {
         var els = this.elements;
 
@@ -84,6 +89,8 @@
         $(window).resize(function () {
           els.slides.height($(window).height());
         });
+
+        els.slider.on('beforeChange', this.onBeforeChange);
       }
     },
 

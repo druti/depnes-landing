@@ -68,6 +68,7 @@ html, body {
 
     .slick-slide {
       outline: 0px solid transparent !important;
+      transition: opacity .3s 0s;
     }
 
     .left, .center, .right {
@@ -78,7 +79,9 @@ html, body {
 
     .left, .right {
       display: none;
+      opacity: 0;
       overflow-y: auto;
+
       .switch {
         position: absolute;
         top: 0;
@@ -117,6 +120,7 @@ html, body {
           }
         }
       }
+
       .outer {
         display: table;
         position: absolute;

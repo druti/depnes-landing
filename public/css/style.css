@@ -47,19 +47,21 @@ html *, body * {
 /* line 69, ../scss/style.scss */
 .wrapper #slider .slick-slide {
   outline: 0px solid transparent !important;
+  transition: opacity .3s 0s;
 }
-/* line 73, ../scss/style.scss */
+/* line 74, ../scss/style.scss */
 .wrapper #slider .left, .wrapper #slider .center, .wrapper #slider .right {
   height: 100%;
   position: relative;
   overflow: hidden;
 }
-/* line 79, ../scss/style.scss */
+/* line 80, ../scss/style.scss */
 .wrapper #slider .left, .wrapper #slider .right {
   display: none;
+  opacity: 0;
   overflow-y: auto;
 }
-/* line 82, ../scss/style.scss */
+/* line 85, ../scss/style.scss */
 .wrapper #slider .left .switch, .wrapper #slider .right .switch {
   position: absolute;
   top: 0;
@@ -70,21 +72,21 @@ html *, body * {
   z-index: 200;
 }
 @media (min-width: 768px) {
-  /* line 82, ../scss/style.scss */
+  /* line 85, ../scss/style.scss */
   .wrapper #slider .left .switch, .wrapper #slider .right .switch {
     height: 64px;
   }
 }
-/* line 95, ../scss/style.scss */
+/* line 98, ../scss/style.scss */
 .wrapper #slider .left .switch .switch-input:checked + .switch-paddle, .wrapper #slider .right .switch .switch-input:checked + .switch-paddle {
   color: #fefefe;
   background: #000;
 }
-/* line 98, ../scss/style.scss */
+/* line 101, ../scss/style.scss */
 .wrapper #slider .left .switch .switch-input:checked + .switch-paddle > .switch-inactive, .wrapper #slider .right .switch .switch-input:checked + .switch-paddle > .switch-inactive {
   display: block;
 }
-/* line 104, ../scss/style.scss */
+/* line 107, ../scss/style.scss */
 .wrapper #slider .left .switch .switch-paddle, .wrapper #slider .right .switch .switch-paddle {
   box-shadow: 0 4px 8px #000;
   background: #000;
@@ -92,7 +94,7 @@ html *, body * {
   height: 100%;
   transition: all 0.3s ease-out;
 }
-/* line 111, ../scss/style.scss */
+/* line 114, ../scss/style.scss */
 .wrapper #slider .left .switch .switch-paddle::after, .wrapper #slider .right .switch .switch-paddle::after {
   background: none;
   border-bottom: 2px solid #fefefe;
@@ -100,7 +102,7 @@ html *, body * {
   bottom: 0;
   transition: all 0.25s ease-out;
 }
-/* line 120, ../scss/style.scss */
+/* line 124, ../scss/style.scss */
 .wrapper #slider .left .outer, .wrapper #slider .right .outer {
   display: table;
   position: absolute;
@@ -109,40 +111,40 @@ html *, body * {
   height: 100%;
   width: 100%;
 }
-/* line 127, ../scss/style.scss */
+/* line 131, ../scss/style.scss */
 .wrapper #slider .left .outer > .inner, .wrapper #slider .right .outer > .inner {
   display: table-cell;
   vertical-align: middle;
 }
-/* line 131, ../scss/style.scss */
+/* line 135, ../scss/style.scss */
 .wrapper #slider .left .outer > .inner > .row > .columns, .wrapper #slider .right .outer > .inner > .row > .columns {
   text-align: center;
 }
-/* line 143, ../scss/style.scss */
+/* line 147, ../scss/style.scss */
 .wrapper #slider .left .switch .switch-input:checked ~ .switch-paddle::after {
   left: 8%;
   width: 55px;
 }
-/* line 150, ../scss/style.scss */
+/* line 154, ../scss/style.scss */
 .wrapper #slider .left .switch .switch-paddle .switch-active {
   left: 8%;
 }
-/* line 153, ../scss/style.scss */
+/* line 157, ../scss/style.scss */
 .wrapper #slider .left .switch .switch-paddle .switch-inactive {
   right: 8%;
 }
-/* line 156, ../scss/style.scss */
+/* line 160, ../scss/style.scss */
 .wrapper #slider .left .switch .switch-paddle::after {
   left: 100%;
 }
-/* line 165, ../scss/style.scss */
+/* line 169, ../scss/style.scss */
 .wrapper #slider .center .controller .button-group {
   box-shadow: 0 4px 8px #000;
   position: relative;
   overflow: auto;
   margin: 0;
 }
-/* line 170, ../scss/style.scss */
+/* line 174, ../scss/style.scss */
 .wrapper #slider .center .controller .button-group .button {
   color: #fefefe;
   background: #000;
@@ -156,29 +158,29 @@ html *, body * {
   width: 50%;
   transition: background-color 0.3s ease-out, color 0.3s ease-out;
 }
-/* line 171, ../scss/style.scss */
+/* line 175, ../scss/style.scss */
 .wrapper #slider .center .controller .button-group .button:first-child {
   text-align: left;
   padding-left: 8%;
 }
-/* line 175, ../scss/style.scss */
+/* line 179, ../scss/style.scss */
 .wrapper #slider .center .controller .button-group .button:last-child {
   text-align: right;
   padding-right: 8%;
 }
 @media (min-width: 768px) {
-  /* line 170, ../scss/style.scss */
+  /* line 174, ../scss/style.scss */
   .wrapper #slider .center .controller .button-group .button {
     height: 64px;
     line-height: 64px;
   }
 }
-/* line 195, ../scss/style.scss */
+/* line 199, ../scss/style.scss */
 .wrapper #slider .center .controller .button-group .button.active {
   color: #fefefe;
   background: #000;
 }
-/* line 202, ../scss/style.scss */
+/* line 206, ../scss/style.scss */
 .wrapper #slider .center .quote {
   color: #fefefe;
   border: none;
@@ -194,12 +196,12 @@ html *, body * {
   z-index: 2;
 }
 @media (min-width: 768px) {
-  /* line 202, ../scss/style.scss */
+  /* line 206, ../scss/style.scss */
   .wrapper #slider .center .quote {
     top: 20%;
   }
 }
-/* line 220, ../scss/style.scss */
+/* line 224, ../scss/style.scss */
 .wrapper #slider .center .logo {
   color: #fff;
   text-align: center;
@@ -215,18 +217,18 @@ html *, body * {
   z-index: 2;
 }
 @media (min-width: 768px) {
-  /* line 220, ../scss/style.scss */
+  /* line 224, ../scss/style.scss */
   .wrapper #slider .center .logo {
     font-size: 6rem;
   }
 }
 @media (min-width: 1024px) {
-  /* line 220, ../scss/style.scss */
+  /* line 224, ../scss/style.scss */
   .wrapper #slider .center .logo {
     font-size: 8rem;
   }
 }
-/* line 241, ../scss/style.scss */
+/* line 245, ../scss/style.scss */
 .wrapper #slider .center .cta {
   display: block;
   margin: 0 auto;
@@ -239,17 +241,17 @@ html *, body * {
   z-index: 10;
 }
 @media (min-width: 768px) {
-  /* line 241, ../scss/style.scss */
+  /* line 245, ../scss/style.scss */
   .wrapper #slider .center .cta {
     bottom: 10%;
     width: 40%;
   }
 }
-/* line 256, ../scss/style.scss */
+/* line 260, ../scss/style.scss */
 .wrapper #slider .center .cta > * {
   margin: 0;
 }
-/* line 260, ../scss/style.scss */
+/* line 264, ../scss/style.scss */
 .wrapper #slider .center .cta .input-group-field {
   border: none;
   display: inline-block;
@@ -260,7 +262,7 @@ html *, body * {
   position: relative;
   z-index: 2;
 }
-/* line 270, ../scss/style.scss */
+/* line 274, ../scss/style.scss */
 .wrapper #slider .center .cta .input-group-button {
   display: inline-block;
   height: 40px;
@@ -268,7 +270,7 @@ html *, body * {
   position: relative;
   z-index: 2;
 }
-/* line 276, ../scss/style.scss */
+/* line 280, ../scss/style.scss */
 .wrapper #slider .center .cta .input-group-button .button {
   background: #fefefe;
   border-left: 1px solid #0a0a0a;
@@ -276,7 +278,7 @@ html *, body * {
   height: 100%;
   width: 100%;
 }
-/* line 284, ../scss/style.scss */
+/* line 288, ../scss/style.scss */
 .wrapper #slider .center .cta .input-group-label {
   background: #0a0a0a;
   color: #fefefe;
@@ -292,27 +294,27 @@ html *, body * {
   white-space: normal;
   width: 100%;
 }
-/* line 306, ../scss/style.scss */
+/* line 310, ../scss/style.scss */
 .wrapper #slider .right .switch .switch-input:checked ~ .switch-paddle::after {
   right: 8%;
   width: 48px;
 }
-/* line 313, ../scss/style.scss */
+/* line 317, ../scss/style.scss */
 .wrapper #slider .right .switch .switch-paddle .switch-active {
   left: auto;
   right: 8%;
 }
-/* line 317, ../scss/style.scss */
+/* line 321, ../scss/style.scss */
 .wrapper #slider .right .switch .switch-paddle .switch-inactive {
   left: 8%;
 }
-/* line 320, ../scss/style.scss */
+/* line 324, ../scss/style.scss */
 .wrapper #slider .right .switch .switch-paddle::after {
   left: auto;
   right: 100%;
 }
 
-/* line 333, ../scss/style.scss */
+/* line 337, ../scss/style.scss */
 .poster-container {
   position: absolute;
   bottom: 0%;
@@ -322,7 +324,7 @@ html *, body * {
   overflow: hidden;
   background: #000;
 }
-/* line 342, ../scss/style.scss */
+/* line 346, ../scss/style.scss */
 .poster-container .poster {
   display: block;
   position: absolute;
@@ -330,7 +332,7 @@ html *, body * {
   bottom: 0;
   width: 100%;
 }
-/* line 349, ../scss/style.scss */
+/* line 353, ../scss/style.scss */
 .poster-container .poster::before {
   content: '';
   background: linear-gradient(180deg, black, transparent);
@@ -341,7 +343,7 @@ html *, body * {
   left: 0;
   z-index: 1;
 }
-/* line 360, ../scss/style.scss */
+/* line 364, ../scss/style.scss */
 .poster-container .poster img {
   filter: gray blur(5px);
   filter: grayscale(1) blur(5px);
@@ -351,18 +353,18 @@ html *, body * {
   display: block;
 }
 @media (min-width: 768px) {
-  /* line 360, ../scss/style.scss */
+  /* line 364, ../scss/style.scss */
   .poster-container .poster img {
     width: 150%;
   }
 }
 @media (min-width: 1024px) {
-  /* line 360, ../scss/style.scss */
+  /* line 364, ../scss/style.scss */
   .poster-container .poster img {
     width: 100%;
   }
 }
-/* line 376, ../scss/style.scss */
+/* line 380, ../scss/style.scss */
 .poster-container .filter {
   background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/562788/dot2px.png");
   position: absolute;
