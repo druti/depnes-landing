@@ -240,6 +240,14 @@ html, body {
         @media (min-width: $laptop) {
           font-size: 8rem;
         }
+
+        img {
+          display: inline-block;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
       }
 
       .cta {
@@ -378,7 +386,7 @@ html, body {
       }
     }
     .filter {
-        background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/562788/dot2px.png');
+        background: url('/public/imgs/dot2px.png');
         position: absolute;
         height: 100%;
         width: 100%;
