@@ -128,16 +128,14 @@ html, body {
       position: absolute;
       left: 0;
       right: 0;
-      top: 10%;
+      top: 20%;
       width: 80%;
       z-index: 2; }
-      @media (min-width: 768px) {
-        .wrapper #slider .center .quote {
-          top: 20%; } }
     .wrapper #slider .center .support-us {
       position: absolute;
       left: 50%;
-      transform: translate(-50%); }
+      transform: translate(-50%);
+      z-index: 10; }
     .wrapper #slider .center .logo {
       color: #fff;
       text-align: center;

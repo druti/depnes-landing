@@ -213,18 +213,16 @@ html, body {
         position: absolute;
         left: 0;
         right: 0;
-        top: 10%;
+        top: 20%;
         width: 80%;
         z-index: 2;
-        @media (min-width: $tablet) {
-          top: 20%;
-        }
       }
 
       .support-us {
         position: absolute;
         left: 50%;
         transform: translate(-50%);
+        z-index: 10;
       }
 
       .logo {
