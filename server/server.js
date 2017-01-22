@@ -7,7 +7,6 @@ var hostname = '127.0.0.1';
 var port = process.env.PORT || 3333;
 
 var server = http.createServer(function (req, res) {
-  console.log('Loading resource... ', req.url);
   root(req, res);
   css(req, res);
   js(req, res);

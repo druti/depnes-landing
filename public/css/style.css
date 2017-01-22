@@ -134,6 +134,10 @@ html, body {
       @media (min-width: 768px) {
         .wrapper #slider .center .quote {
           top: 20%; } }
+    .wrapper #slider .center .support-us {
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%); }
     .wrapper #slider .center .logo {
       color: #fff;
       text-align: center;
