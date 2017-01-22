@@ -67,6 +67,8 @@ html, body {
             top: auto;
             bottom: 0;
             transition: all 0.25s ease-out; }
+      .wrapper #slider .left .hidden-text, .wrapper #slider .right .hidden-text {
+        background: #fff; }
       .wrapper #slider .left .outer, .wrapper #slider .right .outer {
         display: table;
         position: absolute;
