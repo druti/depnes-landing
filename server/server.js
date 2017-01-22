@@ -4,7 +4,7 @@ var css = require('./routes/css');
 var js = require('./routes/js');
 var img = require('./routes/img');
 var hostname = '127.0.0.1';
-var port = process.env.PORT || 3333;
+var port = process.env.PORT || 3334;
 
 var server = http.createServer(function (req, res) {
   root(req, res);
