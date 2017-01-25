@@ -1,4 +1,2 @@
 build/
 public/.sass-cache/
-public/config.rb
-server/data/emails.json

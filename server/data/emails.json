@@ -1,0 +1,50 @@
+[
+    {
+        "email": "prod@test.com",
+        "date": "2017-01-22T21:36:42.060Z"
+    },
+    {
+        "email": "production@test.com",
+        "date": "2017-01-22T21:37:08.542Z"
+    },
+    {
+        "email": "finalprod@test.com",
+        "date": "2017-01-22T21:37:37.774Z"
+    },
+    {
+        "email": "jeanalca@hotmail.com",
+        "date": "2017-01-23T01:09:51.141Z"
+    },
+    {
+        "email": "tristen13@live.ca",
+        "date": "2017-01-23T02:23:46.577Z"
+    },
+    {
+        "email": "r.reyes64@live.com",
+        "date": "2017-01-23T04:08:24.140Z"
+    },
+    {
+        "email": "ammb57@hotmail.com",
+        "date": "2017-01-23T17:34:54.060Z"
+    },
+    {
+        "email": "linalondonio@hotmail.com",
+        "date": "2017-01-24T05:16:49.965Z"
+    },
+    {
+        "email": "lyda27@hotmail.com",
+        "date": "2017-01-24T19:24:46.454Z"
+    },
+    {
+        "email": "d.naranjo13@hotmail.com",
+        "date": "2017-01-25T04:40:04.163Z"
+    },
+    {
+        "email": "titi_na02@yahoo.com",
+        "date": "2017-01-25T06:10:30.024Z"
+    },
+    {
+        "email": "titi_na02@yahoo.com",
+        "date": "2017-01-25T06:14:30.453Z"
+    }
+]
